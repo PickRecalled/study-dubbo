@@ -1,4 +1,4 @@
-package com.atguigu.gmall.bean;
+package com.pickrecalled.model;
 
 import java.io.Serializable;
 

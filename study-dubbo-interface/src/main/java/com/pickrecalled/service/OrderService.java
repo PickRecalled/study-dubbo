@@ -1,8 +1,8 @@
-package com.atguigu.gmall.service;
+package com.pickrecalled.service;
+
+import com.pickrecalled.model.UserAddress;
 
 import java.util.List;
-
-import com.atguigu.gmall.bean.UserAddress;
 
 public interface OrderService {
 
