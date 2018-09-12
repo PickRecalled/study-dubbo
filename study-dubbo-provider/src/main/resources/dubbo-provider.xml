@@ -18,4 +18,7 @@
     <!--暴露服务-->
     <dubbo:service interface="com.pickrecalled.service.UserService" ref="userService"></dubbo:service>
     <bean id="userService" class="com.pickrecalled.service.impl.UserServiceImpl"></bean>
+
+    <!--连接监控中心指定从注册中心发现监控中心地址，否则直连监控中心-->
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
 </beans>
