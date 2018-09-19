@@ -16,8 +16,11 @@
     <dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
 
     <!--暴露服务-->
-    <dubbo:service interface="com.pickrecalled.service.UserService" ref="userService"></dubbo:service>
-    <bean id="userService" class="com.pickrecalled.service.impl.UserServiceImpl"></bean>
+    <dubbo:service interface="com.pickrecalled.service.UserService" ref="oldUserService" version="1.0.0"></dubbo:service>
+    <bean id="oldUserService" class="com.pickrecalled.service.impl.OldUserServiceImpl"></bean>
+
+    <dubbo:service interface="com.pickrecalled.service.UserService" ref="newUserService" version="2.0.0"></dubbo:service>
+    <bean id="newUserService" class="com.pickrecalled.service.impl.NewUserServiceImpl"></bean>
 
     <!--连接监控中心指定从注册中心发现监控中心地址，否则直连监控中心-->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
