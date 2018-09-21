@@ -17,7 +17,7 @@
 
     <!--声明需要调用的远程服务的接口；生成远程服务代理-->
     <dubbo:reference id="userService" interface="com.pickrecalled.service.UserService" version="1.0.0" timeout="3000"
-                     retries="3" stub="com.pickrecalled.service.impl.UserServiceStub"></dubbo:reference>
+                     retries="3" stub="com.pickrecalled.service.UserServiceStub"></dubbo:reference>
 
     <!--连接监控中心指定从注册中心发现监控中心地址，否则直连监控中心-->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
