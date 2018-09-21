@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!--指定服务名 -->
+    <dubbo:application name="study-dubbo-springboot-provider"></dubbo:application>
+
+    <!--指定注册中心的位置-->
+    <dubbo:registry address="zookeeper://10.211.55.5:2181"></dubbo:registry>
+
+    <!--指定通信规则-->
+    <dubbo:protocol name="dubbo" port="20882"></dubbo:protocol>
+
+    <!--暴露服务-->
+    <dubbo:service interface="com.pickrecalled.service.UserService" ref="oldUserService" version="1.0.0"></dubbo:service>
+    <bean id="oldUserService" class="com.pickrecalled.service.impl.OldUserServiceImpl"></bean>
+
+    <dubbo:service interface="com.pickrecalled.service.UserService" ref="newUserService" version="2.0.0"></dubbo:service>
+    <bean id="newUserService" class="com.pickrecalled.service.impl.NewUserServiceImpl"></bean>
+
+    <!--连接监控中心指定从注册中心发现监控中心地址，否则直连监控中心-->
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
+</beans>
