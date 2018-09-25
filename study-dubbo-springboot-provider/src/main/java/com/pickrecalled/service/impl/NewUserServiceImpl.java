@@ -1,5 +1,6 @@
 package com.pickrecalled.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.pickrecalled.model.UserAddress;
 import com.pickrecalled.service.UserService;
 import org.springframework.stereotype.Service;
