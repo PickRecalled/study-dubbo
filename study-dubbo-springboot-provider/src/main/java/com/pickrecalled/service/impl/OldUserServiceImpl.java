@@ -1,5 +1,6 @@
 package com.pickrecalled.service.impl;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.pickrecalled.model.UserAddress;
 import com.pickrecalled.service.UserService;
 import org.springframework.stereotype.Service;
@@ -11,6 +12,7 @@ import java.util.List;
 public class OldUserServiceImpl implements UserService {
 
 	@Override
+    @HystrixCommand
 	public List<UserAddress> getUserAddressList(String userId) {
 		System.out.println("UserServiceImpl.....old....");
 		UserAddress address1 = new UserAddress(1, "北京市昌平区宏福科技园综合楼3层", "1", "李老师", "010-56253825", "Y");

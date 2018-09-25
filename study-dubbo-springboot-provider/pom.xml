@@ -31,22 +31,23 @@
             <version>2.0.1.RELEASE</version>
         </dependency>
 
-        <!--       <dependency>
-                   <groupId>com.netflix.hystrix</groupId>
-                   <artifactId>hystrix-javanica</artifactId>
-                   <version>1.5.12</version>
-               </dependency>-->
         <dependency>
-            <groupId>com.netflix.hystrix</groupId>
-            <artifactId>hystrix-javanica</artifactId>
-            <version>RELEASE</version>
+            <groupId>com.netflix.archaius</groupId>
+            <artifactId>archaius-core</artifactId>
+            <version>2.0.0-rc.7</version>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-core</artifactId>
             <version>1.5.12</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-javanica</artifactId>
+            <version>1.5.12</version>
+        </dependency>-->
 
         <dependency>
             <groupId>com.alibaba.boot</groupId>
@@ -164,6 +165,11 @@
             <groupId>com.netflix.hystrix</groupId>
             <artifactId>hystrix-core</artifactId>
             <version>1.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netflix.hystrix</groupId>
+            <artifactId>hystrix-core</artifactId>
+            <version>1.5.12</version>
         </dependency>
         <dependency>
             <groupId>com.netflix.hystrix</groupId>
